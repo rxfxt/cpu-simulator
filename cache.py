@@ -2,8 +2,8 @@ import collections
 
 CACHE_SIZE = 32
 
-# This class implements a cache for the CPU
-# The deque container datatype is used to mimic FIFO functionality
+# Class implements a cache for the CPU
+# The deque container datatype is used to implement FIFO (First In First Out) functionality
 class Cache:
     def __init__(self):
         self.cache = collections.deque(maxlen = CACHE_SIZE)
@@ -20,11 +20,4 @@ class Cache:
         for i in range(CACHE_SIZE):
             if self.cache[i][0] == address:
                 return self.cache[i][1]
-        return None
-                
-
-
-
-
-
-    
+        return None  

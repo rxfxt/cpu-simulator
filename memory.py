@@ -1,13 +1,13 @@
-MEMORY_BUS_SIZE = 128
+MEMORY_BUS_SIZE = 64
 
-# This class implements a memory bus
+# Memory class to implement memory bus
 class Memory:
     def __init__(self):
         self.memory_bus = {}
         self.initialize_memory_bus()
 
     # Method to initialize memory bus with size based on MEMORY_BUS_SIZE variable
-    # Memory bus is setup as a dict with binary address being key, and value being value 
+    # Memory bus is setup as a dict with binary address being key and value being value 
     def initialize_memory_bus(self):
         for i in range(MEMORY_BUS_SIZE):
             self.memory_bus[f'{i:08b}'] = 0
