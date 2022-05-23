@@ -1,20 +1,22 @@
 # CPU Simulator
  
-## Computer Architecture project to simulate a CPU, including memory and cache 
+A computer architecture project to simulate a CPU, including registers, memory and cache 
 
-1. What does the program do?
+**What does the program do?**
 
-This program simulates a CPU with a MIPS (Microprocessor without Interlocked Pipelined Stages) instruction set architecture (ISA). The instructions for the CPU and memory can be fed to the simulator through a text file
+This program simulates a CPU with a MIPS (Microprocessor without Interlocked Pipelined Stages) instruction set architecture (ISA). The instructions for the CPU and memory can be fed to the simulator through a text file.
 
-2. What data do you need?
+**What data do you need?**
 
 Program needs CPU instructions as well as data input to initialize memory bus. These instructions can be inputed as a .txt file.
 
-3. What aspects of a CPU can you simulate using Python?
+**What aspects of a CPU can you simulate using this program?**
 
-The program can simulate a variety of MIPS instructions including ADD, ADDI, SUB, SLT, CACHE, J and HALT
+The program can simulate a variety of MIPS CPU instructions including ADD, ADDI, SUB, SLT, CACHE, J and HALT. In addition, the program allows for a memory bus to be simulated.
 
 ## Usage
+
+To run the program, open a terminal where the program is located and execute the following command: 
 
 ```python
 python main.py
@@ -52,7 +54,7 @@ Number of instructions processed: 9
 
 After the instructions are executed, the Cache, Register and Number of instructions processed are displayed. More details on MIPS instructions can be found [here](https://www.dsi.unive.it/~gasparetto/materials/MIPS_Instruction_Set.pdf).
 
-## Current Limitations and Future Improvements 
+## Current Limitations
 - Cache is initilaized when cache_flag is set to True but data is not transfered between registers, cache and memory. In order for cache to be correctly implemented, associativity would need to be set up to associate the cache with memory and registers.
 - The Jump instruction only increments the CPU counter and does not jump to the specific instruction.
 - Error handling for incorrect file names.
